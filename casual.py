@@ -28,6 +28,7 @@ def plot_graph_loss(file_name, model_name):
 def main():
     print('casual.py')
     print('')
+    print('')
     print()
 
 
