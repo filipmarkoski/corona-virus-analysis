@@ -82,8 +82,16 @@ def highlight_max(s):
 
 
 def highlight_min(s):
-    is_max = s == s.min()
-    return ['background-color: lime' if v else '' for v in is_max]
+    is_min = s == s.min()
+    return ['background-color: lime' if v else '' for v in is_min]
+
+
+# df.index += 1
+# df.astype('int32').style.apply(highlight_non_zeros)
+def highlight_non_zeros(s):
+    # s stands for pd.Series
+    is_zero = (s != 0)
+    return ['background-color: yellow' if v else '' for v in is_zero]
 
 
 def print_sizes(filename, nbytes):
